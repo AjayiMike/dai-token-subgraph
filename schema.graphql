@@ -1,6 +1,23 @@
-type ExampleEntity @entity {
+type Approval @entity {
   id: ID!
-  count: BigInt!
-  src: Bytes! # address
-  guy: Bytes! # address
+  src: String!
+  guy: String!
+  wad: BigInt!
+}
+
+
+type LogNote @entity {
+  id: ID!
+  sig: Bytes!
+  usr: String!
+  arg1: Bytes!
+  args2: Bytes!
+  data: Bytes!
+}
+
+type Transfer @entity {
+  id: ID!
+  src: String!
+  dst: String!
+  wad: BigInt!
 }
